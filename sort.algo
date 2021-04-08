@@ -1,0 +1,13 @@
+PROCEDURE sort(VAR arr : ARRAY_OF INTEGER)
+VAR
+    i,j,temp : INTEGER ;
+BEGIN
+    FOR i FROM 1 TO arr.length -1 DO 
+        temp:=arr[i];
+        j:=i;
+        WHILE ((j>0) && (arr[j-1]>temp)) DO
+            arr[j]:=arr[j-1];
+            j:=j-1 ;
+            arr[j]:=temp ;
+        END_WHILE
+END
